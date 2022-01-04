@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Brief 2</title>
+</head>
+<body>
+	<div id=container>
+	<div id="form">
+		<form>
+			<!-- titre -->
+		
+			<label for="titreForm">Title :</label>
+			<input id='titreForm' type="text" >
+			<p id='messageTitle'></p>
+
+			<!-- auteur -->
+
+			<label for="auteurForm">Author :</label>
+			<input id='auteurForm' type="text" >
+			<p id='messageAuthor'></p>
+
+			<!-- prix -->
+
+			<label for="prixForm">Price :</label>
+			<input id='prixForm' type="text" >
+			<p id='messagePrice'></p>
+
+			<!-- date -->
+			<label for="dateForm">Date :</label>
+			<input id='dateForm' type="date">
+			<p id='messageDate'></p>
+
+			<!-- langues -->
+
+			<label for="langues">Choose a language :</label>
+			<select name="langues" id="Langues">
+			    <option  disabled selected hidden value="">--Please choose an option--</option>
+			    <option name="langues" value="français">Français</option>
+			    <option name="langues" value="anglais">Anglais</option>
+			    <option name="langues" value="arabe">Arabe</option>
+			</select>
+			<p id="messageLangue"></p>
+
+			<!-- type -->
+
+			<input type="radio" id="Roman" name="type" value="Roman" class="type">
+			<label for="Roman">Roman</label><br>
+			<input type="radio" id="Essai" name="type" value="Essai"class="type">
+			<label for="bandeDessinée">Essai</label><br>
+			<input type="radio" id="BandeDessinée" name="type" value="Bande-dessinée"class="type">
+			<label for="bande-dessinée">Bande-dessinée</label>
+			<p id="messageType"></p>
+
+			<!-- submit -->
+
+			<input type="submit" id="submit" value="Save">
+		</form>
+	</div>
+
+	<!-- Table section -->
+	<div id="tableStyle">
+	<table id="table" border="1px">
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Price</th>
+			<th>Date</th>
+			<th>Language</th>
+			<th>Type</th>
+			<th>controls</th>
+		</tr>
+	</table>			
+	</div>
+</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>	
