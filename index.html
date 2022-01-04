@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Brief 2</title>
 </head>
 <body>
@@ -54,6 +53,11 @@
 			<label for="bande-dessinée">Bande-dessinée</label>
 			<p id="messageType"></p>
 
+			<!-- email -->
+			<label for="email">Enter your email</label>
+			<input type="email" id="email">
+			<p id="messageEmail"></p>
+
 			<!-- submit -->
 
 			<input type="submit" id="submit" value="Save">
@@ -62,16 +66,21 @@
 
 	<!-- Table section -->
 	<div id="tableStyle">
-	<table id="table" border="1px">
-		<tr>
-			<th>Title</th>
-			<th>Author</th>
-			<th>Price</th>
-			<th>Date</th>
-			<th>Language</th>
-			<th>Type</th>
-			<th>controls</th>
-		</tr>
+	<table border="1px">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Price</th>
+				<th>Date</th>
+				<th>Language</th>
+				<th>Type</th>
+				<th>Email</th>
+				<th>controls</th>
+			</tr>
+		</thead>
+		<tbody id="table">
+		</tbody>
 	</table>			
 	</div>
 </div>
