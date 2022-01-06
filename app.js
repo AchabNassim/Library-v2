@@ -50,10 +50,12 @@
 	// localStorage
 
 	var list = ""
+	// localStorage.removeItem("list");
+
 	list = JSON.parse(localStorage.getItem("list"));
 	if(list != null){
 		for (i= 0 ; i < list.length ; i++){
-			var localBooks = new Book (list[i].titre,list[i].author,list[i].price,list[i].date,list[i].language,list[i].type,list[i].email)
+			var localBooks = new Book (list[i].title,list[i].author,list[i].price,list[i].date,list[i].language,list[i].type,list[i].email)
 			bookList.push(localBooks)
 			tri()
 		}
@@ -203,18 +205,20 @@ function Delete(btn){
 
 function edit(btn){
 	var index = btn.parentNode.parentNode.rowIndex
-	if (btn.value == edit){
-			title.value = row.cells[0].innerHTML
-			author.value = row.cells[1].innerHTML
-			price.value = row.cells[2].innerHTML
-			date.value = row.cells[3].innerHTML
-			language.value = row.cells[4].innerHTML
+	var rowToEdit = myTable.rows[index-1]
+	if (btn.value == "edit"){
+			title.value = rowToEdit.cells[0].innerHTML
+			author.value = rowToEdit.cells[1].innerHTML
+			price.value = rowToEdit.cells[2].innerHTML
+			date.value = rowToEdit.cells[3].innerHTML
+			language.value = rowToEdit.cells[4].innerHTML
 			for (var i = 0 ; i < typeRadio.length ; i++ ){
-				if (row.cells[5].checked == typeRadio[i].value)
+				if (rowToEdit.cells[5].innerHTML == typeRadio[i].value)
 					typeRadio[i].checked = true;
 			}
-			email.value = row.cells[6].innerHTML
+			email.value = rowToEdit.cells[6].innerHTML
 			btn.value = "save"
+			document.getElementById("submit").setAttribute("disabled","true")
 		}
 		
 
@@ -235,6 +239,7 @@ function edit(btn){
             charger();
             localStorage.setItem("list",JSON.stringify(bookList));
            	btn.value ="edit";
+           	document.getElementById("editBtn").removeAttribute("disabled")
 	}
 }
 
