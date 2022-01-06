@@ -239,7 +239,7 @@ function edit(btn){
             charger();
             localStorage.setItem("list",JSON.stringify(bookList));
            	btn.value ="edit";
-           	document.getElementById("editBtn").removeAttribute("disabled")
+           	document.getElementById("submit").removeAttribute("disabled")
 	}
 }
 
